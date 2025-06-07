@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radha Enterprises - Solar Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c786c;
+            --secondary-color: #ff9800;
+            --dark-color: #004445;
+            --light-color: #f8f1f1;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+             url('https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        /* Logo Styles */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 50px;
+            width: 50px;
+            background: linear-gradient(135deg, #FFD700 30%, #FFA500 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        
+        .logo-img i {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .logo-subtext {
+            font-size: 0.8rem;
+            color: #FFD700;
+            display: block;
+            line-height: 1;
+            margin-top: 2px;
+        }
+        
+        .whatsapp-number {
+            font-size: 0.9rem;
+            color: white;
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .whatsapp-number i {
+            color: #25D366;
+            margin-right: 5px;
+        }
+        
+        /* Rest of your CSS remains the same */
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .quick-booking {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: -50px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--dark-color);
+            border-color: var(--dark-color);
+        }
+        
+        .solar-gallery img {
+            border-radius: 10px;
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .solar-gallery img:hover {
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .contact-info i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+        
+        .whatsapp-icon {
+            margin-top: 15px;
+        }
+        
+        /* Quick Contact Buttons */
+        .contact-actions .btn {
+            white-space: nowrap;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .whatsapp-number {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--dark-color);">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo-container">
+                    <!-- Custom Sun Logo -->
+                    <div class="logo-img">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <!-- Text Logo -->
+                    <div>
+                        <span class="logo-text">Radha Enterprises</span>
+                        <span class="logo-subtext">Solar Solutions</span>
+                    </div>
+                    <!-- WhatsApp Numbers -->
+                    <div class="whatsapp-number">
+                        <div>
+                            <i class="fab fa-whatsapp"></i> 
+                            <span>9421053131</span>
+                        </div>
+                        <div class="ms-3">
+                            <i class="fab fa-whatsapp"></i> 
+                            <span>9309562044</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Power Your Future With Solar Energy</h1>
+            <p class="lead mb-5">Radha Enterprises provides top-quality solar solutions for homes and businesses across the region</p>
+            <a href="#quick-booking" class="btn btn-warning btn-lg px-4 me-2">Book Free Consultation</a>
+            <a href="https://wa.me/919421053131" class="btn btn-success btn-lg px-4">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Quick Booking Form -->
+    <section id="quick-booking" class="container mb-5">
+        <div class="quick-booking">
+            <h2 class="text-center mb-4">Quick Appointment Booking</h2>
+            <form id="quickBookingForm">
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <input type="text" class="form-control" id="clientName" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <input type="tel" class="form-control" id="clientPhone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <select class="form-select" id="serviceType">
+                            <option selected>Select Service</option>
+                            <option>Residential Solar Installation</option>
+                            <option>Commercial Solar Solutions</option>
+                            <option>Solar Water Heater</option>
+                            <option>Maintenance & Repair</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg">Book Now</button>
+                </div>
+                <div class="text-center mt-3">
+                    <p class="mb-1">Or contact us directly:</p>
+                    <a href="tel:+919421053131" class="btn btn-sm btn-success me-2">
+                        <i class="fas fa-phone"></i> 9421053131
+                    </a>
+                    <a href="tel:+919309562044" class="btn btn-sm btn-success">
+                        <i class="fas fa-phone"></i> 9309562044
+                    </a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Rest of your HTML content remains the same -->
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Our Solar Solutions</h2>
+                <p class="lead">Comprehensive solar energy services for all your needs</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4>Residential Solar</h4>
+                            <p>Complete solar solutions for homes with customized designs and financing options.</p>
+                            <a href="https://wa.me/919421053131?text=Hi%20Radha%20Enterprises,%20I%20want%20information%20about%20Residential%20Solar" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-whatsapp"></i> Enquire Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4>Commercial Solar</h4>
+                            <p>Reduce operational costs with our commercial solar panel installations.</p>
+                            <a href="https://wa.me/919421053131?text=Hi%20Radha%20Enterprises,%20I%20want%20information%20about%20Commercial%20Solar" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-whatsapp"></i> Enquire Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h4>Maintenance</h4>
+                            <p>Professional maintenance and repair services to keep your system running efficiently.</p>
+                            <a href="https://wa.me/919421053131?text=Hi%20Radha%20Enterprises,%20I%20need%20Maintenance%20services" class="btn btn-sm btn-outline-primary">
+                                <i class="fab fa-whatsapp"></i> Enquire Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Our Solar Projects</h2>
+                <p class="lead">See our completed installations across the region</p>
+                <p>Want to discuss your project? <a href="https://wa.me/919421053131">Chat with us on WhatsApp</a></p>
+            </div>
+            <div class="row solar-gallery">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                         alt="Residential Solar Installation" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Commercial Solar Panels" class="img-fluid">
+                </div>
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" 
+                         alt="Solar Installation Team" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2>About Radha Enterprises</h2>
+                    <p class="lead">Your trusted partner in solar energy solutions since 2010</p>
+                    <p>Radha Enterprises was founded with a vision to provide sustainable energy solutions to our community. With over a decade of experience, we've installed more than 5,000 solar systems across residential and commercial properties.</p>
+                    <p>Our team of certified solar technicians ensures every installation meets the highest standards of quality and efficiency. We're committed to helping our customers reduce their carbon footprint while saving money on energy bills.</p> 
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i> 10+ years of experience</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Certified solar technicians</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Quality products from leading brands</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Comprehensive after-sales support</li>
+                    </ul>
+                    <a href="tel:+919421053131" class="btn btn-primary me-2">
+                        <i class="fas fa-phone"></i> Call Us Now
+                    </a>
+                    <a href="https://wa.me/919421053131" class="btn btn-success">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Radha Enterprises Team" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Contact Us</h2>
+                <p class="lead">Get in touch for a free solar consultation</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <div class="contact-info">
+                        <h4 class="mb-4">Radha Enterprises</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Solar Street, Green City, GC 12345</p>
+                        <p><i class="fas fa-phone"></i> +91 9421053131 / 9309562044</p>
+                        <p><i class="fas fa-envelope"></i> radhaenterprises@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM</p>
+                        
+                        <!-- Quick Contact Buttons -->
+                        <div class="contact-actions mt-4">
+                            <h5>Quick Contact</h5>
+                            <a href="tel:+919421053131" class="btn btn-success me-2 mb-2">
+                                <i class="fas fa-phone"></i> Call 9421053131
+                            </a>
+                            <a href="tel:+919309562044" class="btn btn-success me-2 mb-2">
+                                <i class="fas fa-phone"></i> Call 9309562044
+                            </a>
+                            <a href="https://wa.me/919421053131" class="btn btn-success me-2 mb-2">
+                                <i class="fab fa-whatsapp"></i> WhatsApp 9421053131
+                            </a>
+                            <a href="https://wa.me/919309562044" class="btn btn-success me-2 mb-2">
+                                <i class="fab fa-whatsapp"></i> WhatsApp 9309562044
+                            </a>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Follow Us</h5>
+                            <a href="#" class="text-decoration-none me-3"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="text-decoration-none me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-decoration-none me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-decoration-none"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <p class="mt-3">Prefer instant contact? <a href="https://wa.me/919421053131">Chat with us on WhatsApp</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Radha Enterprises</h5>
+                    <p>Leading provider of solar energy solutions committed to quality and customer satisfaction.</p>
+                    <div class="mt-3">
+                        <a href="tel:+919421053131" class="btn btn-sm btn-success me-2 mb-2">
+                            <i class="fas fa-phone"></i> 9421053131
+                        </a>
+                        <a href="tel:+919309562044" class="btn btn-sm btn-success mb-2">
+                            <i class="fas fa-phone"></i> 9309562044
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="#services" class="text-white">Services</a></li>
+                        <li><a href="#gallery" class="text-white">Gallery</a></li>
+                        <li><a href="#about" class="text-white">About Us</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Residential Solar</a></li>
+                        <li><a href="#" class="text-white">Commercial Solar</a></li>
+                        <li><a href="#" class="text-white">Solar Water Heaters</a></li>
+                        <li><a href="#" class="text-white">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Options</h5>
+                    <div class="mb-3">
+                        <a href="https://wa.me/919421053131" class="btn btn-sm btn-success w-100 mb-2">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                        <a href="tel:+919421053131" class="btn btn-sm btn-light w-100">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                    <h5>Newsletter</h5>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-warning" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Radha Enterprises. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919421053131" target="_blank">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add EmailJS library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your User ID
+        (function() {
+            emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS user ID
+        })();
+        
+        // Form submission handling
+        document.getElementById('quickBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const service = document.getElementById('serviceType').value;
+            
+            // Format the current date
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString();
+            
+            // Prepare the WhatsApp message
+            const whatsappMessage = `New Booking Request:\n\nName: ${name}\nPhone: ${phone}\nService: ${service}\nDate: ${date} ${time}`;
+            
+            // Send to WhatsApp (both numbers)
+            const whatsappUrl1 = `https://wa.me/919421053131?text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappUrl2 = `https://wa.me/919309562044?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Open WhatsApp in new tabs
+            window.open(whatsappUrl1, '_blank');
+            window.open(whatsappUrl2, '_blank');
+            
+            // Send email using EmailJS
+            const emailParams = {
+                to_name: "Radha Enterprises",
+                from_name: name,
+                from_phone: phone,
+                service_type: service,
+                date_time: `${date} ${time}`
+            };
+            
+            emailjs.send('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', emailParams)
+                .then(function(response) {
+                    console.log('Email sent!', response.status, response.text);
+                }, function(error) {
+                    console.log('Email failed to send...', error);
+                });
+            
+            // Show success message to user
+            alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');
+            this.reset();
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
